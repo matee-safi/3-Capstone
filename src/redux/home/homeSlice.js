@@ -5,14 +5,14 @@ const initialState = {
   data: [],
   isPending: false,
   error: '',
+  id: Math.random(),
 };
 
 export const fetchData = createAsyncThunk(
   'home/fetchData',
   async () => {
     try {
-      const response = await axios('https://financialmodelingprep.com/api/v3/financial-statement-symbol-lists?apikey=d40f5d304d6500b95c49511cbe314b41');
-      console.log(response.data);
+      const response = await axios('https://financialmodelingprep.com/api/v3/stock_market/gainers?apikey=d40f5d304d6500b95c49511cbe314b41');
       return response.data;
     } catch (error) {
       throw new Error(error);
