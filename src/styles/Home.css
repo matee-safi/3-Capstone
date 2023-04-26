@@ -51,8 +51,6 @@ input {
   align-items: center;
   flex-direction: column;
   justify-content: center;
-  font-weight: bold;
-  font-size: 1.2em;
 }
 
 .data div:nth-child(4n-3) {

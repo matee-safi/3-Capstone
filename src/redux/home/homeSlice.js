@@ -3,9 +3,9 @@ import axios from 'axios';
 
 const initialState = {
   data: [],
+  details: {},
   isPending: false,
   error: '',
-  id: Math.random(),
 };
 
 export const fetchData = createAsyncThunk(
@@ -23,7 +23,13 @@ export const fetchData = createAsyncThunk(
 export const homeSlice = createSlice({
   name: 'home',
   initialState,
-  reducers: {},
+  reducers: {
+    showDetails: (state, action) => {
+      const details = state.data.filter((item) => item.ticker === action.payload);
+      // disable eslint for this line
+      state.details = details[0];
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.pending, (state) => {
