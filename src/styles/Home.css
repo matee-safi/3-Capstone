@@ -75,4 +75,13 @@ input {
   align-self: flex-end;
   justify-self: flex-start;
   margin-right: 10%;
+  color: white;
+}
+
+.status {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  font-size: 2em;
 }

@@ -23,13 +23,6 @@ export const fetchData = createAsyncThunk(
 export const homeSlice = createSlice({
   name: 'home',
   initialState,
-  reducers: {
-    showDetails: (state, action) => {
-      const details = state.data.filter((item) => item.ticker === action.payload);
-      // disable eslint for this line
-      state.details = details[0];
-    },
-  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.pending, (state) => {
@@ -41,7 +34,7 @@ export const homeSlice = createSlice({
       })
       .addCase(fetchData.rejected, (state) => {
         state.isPending = false;
-        state.error = 'Unable to fetch data, please check your connection and try again later.';
+        state.error = 'Unable to fetch data';
       });
   },
 });
