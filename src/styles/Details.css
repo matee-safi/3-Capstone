@@ -13,3 +13,13 @@ h1 {
 .cross-container {
   padding: 5%;
 }
+
+.details-container {
+  height: 100%;
+  width: 100%;
+  padding-top: 10%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

@@ -3,7 +3,7 @@ import axios from 'axios';
 
 const initialState = {
   data: [],
-  details: {},
+  detailsId: 0,
   isPending: false,
   error: '',
 };
@@ -24,8 +24,8 @@ export const homeSlice = createSlice({
   name: 'home',
   initialState,
   reducers: {
-    displayDetails: (state, action) => {
-      state.details = action.payload;
+    getId: (state, action) => {
+      state.detailsId = action.payload;
     },
   },
   extraReducers: (builder) => {
@@ -47,4 +47,5 @@ export const homeSlice = createSlice({
   },
 });
 
+export const { getId } = homeSlice.actions;
 export default homeSlice.reducer;

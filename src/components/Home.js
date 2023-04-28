@@ -1,7 +1,7 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import { useSelector, useDispatch } from 'react-redux';
-import { fetchData } from '../redux/home/homeSlice';
+import { fetchData, getId } from '../redux/home/homeSlice';
 import '../styles/Home.css';
 import enter from '../images/arrow-right.png';
 
@@ -14,6 +14,10 @@ const Home = () => {
   useEffect(() => {
     dispatch(fetchData());
   }, [dispatch]);
+
+  const handleGetId = (id) => {
+    dispatch(getId(id));
+  };
 
   return (
     <div>
@@ -36,7 +40,7 @@ const Home = () => {
         {data
         && data.map((item) => (
           <div key={item.id}>
-            <Link className="enter-icon" to="details">
+            <Link className="enter-icon" to="details" onClick={() => handleGetId(item.id)}>
               <img src={enter} alt="right arrow" />
             </Link>
             <p>{item.symbol}</p>
