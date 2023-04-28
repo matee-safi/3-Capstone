@@ -23,6 +23,11 @@ export const fetchData = createAsyncThunk(
 export const homeSlice = createSlice({
   name: 'home',
   initialState,
+  reducers: {
+    displayDetails: (state, action) => {
+      state.details = action.payload;
+    },
+  },
   extraReducers: (builder) => {
     builder
       .addCase(fetchData.pending, (state) => {
@@ -31,6 +36,9 @@ export const homeSlice = createSlice({
       .addCase(fetchData.fulfilled, (state, action) => {
         state.isPending = false;
         state.data = action.payload;
+        state.data.forEach((item) => {
+          item.id = state.data.indexOf(item);
+        });
       })
       .addCase(fetchData.rejected, (state) => {
         state.isPending = false;

@@ -35,8 +35,8 @@ const Home = () => {
       <div className="data">
         {data
         && data.map((item) => (
-          <div key={Math.random()}>
-            <Link className="enter-icon" to="details" details={item}>
+          <div key={item.id}>
+            <Link className="enter-icon" to="details">
               <img src={enter} alt="right arrow" />
             </Link>
             <p>{item.symbol}</p>
