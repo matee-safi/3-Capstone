@@ -1,0 +1,22 @@
+h1 {
+  color: white;
+  font-size: 50px;
+  text-align: center;
+  font-family: 'Proza Libre', sans-serif;
+}
+
+.cross-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.cross-container {
+  padding: 15px;
+}
+
+.details-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
