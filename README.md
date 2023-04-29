@@ -157,7 +157,7 @@ If you like this project please leave a ⭐️.
 
 ## 🙏 Acknowledgments <a name="acknowledgements"></a>
 
-- The original design is made by a creative designer ` Nelson Sakwa on Behance.` You can visit her profile here <a href="https://www.behance.net/sakwadesignstudio">Link</a>
+- The original design is made by a creative designer ` Nelson Sakwa on Behance.` You can visit her profile here <a href="https://www.behance.net/sakwadesignstudio">Link</a><br>
 <a href="https://www.flaticon.com/free-icons/money" title="money icons">Money icons created by Smashicons - Flaticon</a><br>
 <a href="https://www.flaticon.com/free-icons/arrow" title="arrow icons">Arrow icons created by deemakdaksina - Flaticon</a><br>
 <a href="https://www.flaticon.com/free-icons/close" title="close icons">Close icons created by Darius Dan - Flaticon</a>
