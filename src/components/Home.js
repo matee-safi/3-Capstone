@@ -51,7 +51,7 @@ const Home = () => {
         {data
         && data.filter((recipe) => (search.toLowerCase() === '' ? recipe : recipe.symbol.toLowerCase().includes(search))).map((item) => (
           <div key={item.id}>
-            <Link className="enter-icon" to="details" onClick={() => handleGetId(item.id)}>
+            <Link className="enter-icon" to={`details/${item.symbol}`} onClick={() => handleGetId(item.id)}>
               <img src={enter} alt="right arrow" />
             </Link>
             <p className="symbol">{item.symbol}</p>
