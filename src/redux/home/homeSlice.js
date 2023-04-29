@@ -6,6 +6,7 @@ const initialState = {
   detailsId: 0,
   isPending: false,
   error: '',
+  search: '',
 };
 
 export const fetchData = createAsyncThunk(
@@ -27,6 +28,7 @@ export const homeSlice = createSlice({
     getId: (state, action) => {
       state.detailsId = action.payload;
     },
+    setSearch: (state, action) => ({ ...state, search: action.payload }),
   },
   extraReducers: (builder) => {
     builder
@@ -38,6 +40,7 @@ export const homeSlice = createSlice({
         state.data = action.payload;
         state.data.forEach((item) => {
           item.id = state.data.indexOf(item);
+          item.isVisible = true;
         });
       })
       .addCase(fetchData.rejected, (state) => {
@@ -47,5 +50,5 @@ export const homeSlice = createSlice({
   },
 });
 
-export const { getId } = homeSlice.actions;
+export const { getId, setSearch } = homeSlice.actions;
 export default homeSlice.reducer;
