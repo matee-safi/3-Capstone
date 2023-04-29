@@ -70,7 +70,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 <a href="https://stock-prices.onrender.com/">View page</a> <br>
-<a href="">View presentation</a>
+<a href="https://www.loom.com/share/c0de7458a108469c94905ce5502cf2f9">View presentation</a>
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -123,8 +123,8 @@ Get a hosting website and give all of the github files
 
 👤 Matee Safi
 
-- GitHub: [@githubhandle](https://github.com/matee-safi)
-- Twitter: [@twitterhandle](https://twitter.com/matee_safi)
+- GitHub: [@github](https://github.com/matee-safi)
+- Twitter: [@twitter](https://twitter.com/matee_safi)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/matee-safi/)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
