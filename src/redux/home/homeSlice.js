@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
 
-const initialState = {
+export const initialState = {
   data: [],
   detailsId: 0,
-  isPending: false,
+  isPending: true,
   error: '',
   search: '',
 };
@@ -40,7 +40,6 @@ export const homeSlice = createSlice({
         state.data = action.payload;
         state.data.forEach((item) => {
           item.id = state.data.indexOf(item);
-          item.isVisible = true;
         });
       })
       .addCase(fetchData.rejected, (state) => {
